@@ -4792,10 +4792,9 @@ react-dom@^16.6.0:
     prop-types "^15.6.2"
     scheduler "^0.15.0"
 
-react-float-anchor@^3.0.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/react-float-anchor/-/react-float-anchor-3.1.0.tgz#f320d9fbd58330b2d9ba51a2cb13b39d0881b166"
-  integrity sha512-srm1l87JYzkEqxfRbeacsYEYeMrC2i/+6c1H+454MF5amJanvSd5EWbwNFUOshQJSPZSEjLQ3+Hn2ee8xcFdSg==
+"react-float-anchor@https://github.com/Workgrid/react-float-anchor.git":
+  version "3.2.0"
+  resolved "https://github.com/Workgrid/react-float-anchor.git#2fb926b85bfdb95a25179ffc98c1e0570cf03e73"
   dependencies:
     "@babel/runtime" "^7.0.0"
     contain-by-screen "^1.0.4"

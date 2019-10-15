@@ -1,6 +1,6 @@
 {
   "name": "react-menu-list",
-  "version": "6.1.0",
+  "version": "6.2.0",
   "description": "React component for menu lists and submenus",
   "main": "js/index.js",
   "sideEffects": false,
@@ -70,7 +70,7 @@
     "kefir-bus": "^2.2.0",
     "kefir-stopper": "^2.1.0",
     "prop-types": "^15.6.0",
-    "react-float-anchor": "^3.0.0"
+    "react-float-anchor": "https://github.com/Workgrid/react-float-anchor.git"
   },
   "peerDependencies": {
     "react": "^16.6.0"

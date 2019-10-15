@@ -157,8 +157,6 @@ export default class MenuButton extends React.Component<Props, State> {
       }
     }
 
-    console.log('Rendering button ', this.props.parentElement)
-
     return (
       <FloatAnchor
         parentElement={this.props.parentElement}

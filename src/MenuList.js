@@ -79,7 +79,7 @@ export default class MenuList extends React.Component<Props> {
   _lockedHighlightedIndex: ?number;
   _keyboardTakenByIndex: ?number;
 
-  _elRef = React.createRef<HTMLDivElement>();
+  #elRef = React.createRef<HTMLDivElement>();
 
   _getVisibleHighlightedIndex(): ?number {
     return this._lockedHighlightedIndex != null
@@ -253,7 +253,7 @@ export default class MenuList extends React.Component<Props> {
   componentDidMount() {
     const isEnterOrArrowKey = e =>
       e.which === 13 || (37 <= e.which && e.which <= 40);
-    const el = this._elRef.current;
+    const el = this.#elRef.current;
     /*:: if (!el) throw new Error(); */
 
     // The only things that should receive keydown/keypress events before us
@@ -266,6 +266,8 @@ export default class MenuList extends React.Component<Props> {
       fromEventsCapture(window, 'keydown')
         .filter(isEnterOrArrowKey)
         .filter(e => !el.contains(e.target)),
+      Kefir.fromEvents(el, 'keydown').filter(isEnterOrArrowKey),
+      fromEventsCapture(el, 'keydown').filter(isEnterOrArrowKey),
     ])
       .takeUntilBy(this._stopper)
       .onValue(event => {
@@ -477,7 +479,7 @@ export default class MenuList extends React.Component<Props> {
 
   render() {
     return (
-      <div role="menu" ref={this._elRef}>
+      <div role="menu" ref={this.#elRef}>
         <MenuListContext.Provider value={this._menuListContext}>
           {this.props.children}
         </MenuListContext.Provider>

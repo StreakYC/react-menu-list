@@ -41,6 +41,7 @@ export type Props = {
   onWillOpen?: () => void,
   onDidOpen?: () => void,
   onWillClose?: () => void,
+  type?: string
 };
 
 export default class MenuButton extends React.Component<Props, State> {
@@ -62,10 +63,12 @@ export default class MenuButton extends React.Component<Props, State> {
     onWillOpen: PropTypes.func,
     onDidOpen: PropTypes.func,
     onWillClose: PropTypes.func,
+    type: PropTypes.string,
   };
 
   static defaultProps = {
     positionOptions: {position: 'bottom', hAlign: 'left'},
+    type: "button"
   };
 
   state: State = {
@@ -201,6 +204,7 @@ export default class MenuButton extends React.Component<Props, State> {
         onMouseDown={onMouseDown}
         disabled={this.props.disabled}
         title={this.props.title}
+        type={this.props.type}
       >
         {this.props.children}
       </button>

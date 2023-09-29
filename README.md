@@ -140,7 +140,7 @@ A SubMenuItem supports the following props:
 - `positionOptions`: This is an optional object of options to control how the
   dropdown is aligned to the menu item. The options are the same as those
   supported by
-  [contain-by-screen (version ^1.0)](https://github.com/AgentME/contain-by-screen#readme).
+  [contain-by-screen](https://github.com/Macil/contain-by-screen#readme).
   This defaults to `{position:'right', vAlign:'top', hAlign: 'left'}`.
 - `menuZIndex`: This is an optional number controlling the z-index CSS property of
   the menu's container.
